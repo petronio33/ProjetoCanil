@@ -5,41 +5,47 @@
  */
 package dados.entidades;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  *
  * @author IFNMG
  */
 public class Hospedagem {
-    private LocalDate data_entrada;
-    private LocalDate data_saida;
-    private String valor;
+    private LocalDateTime data_entrada;
+    private LocalDateTime data_saida;
+    private BigDecimal valor;
     private Cachorro cao;
 
-    public LocalDate getData_entrada() {
+    public LocalDateTime getData_entrada() {
         return data_entrada;
     }
 
-    public void setData_entrada(LocalDate data_entrada) {
+    public void setData_entrada(LocalDateTime data_entrada) {
         this.data_entrada = data_entrada;
     }
 
-    public LocalDate getData_saida() {
+    public LocalDateTime getData_saida() {
         return data_saida;
     }
 
-    public void setData_saida(LocalDate data_saida) {
+    public void setData_saida(LocalDateTime data_saida) {
         this.data_saida = data_saida;
     }
 
-    public String getValor() {
+    public BigDecimal getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
+
+   
+
+    
 
     public Cachorro getCao() {
         return cao;

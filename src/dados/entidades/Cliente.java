@@ -17,6 +17,15 @@ public class Cliente {
     private String cpf;
     private LocalDate data_nascimento;
     private String observacao;
+    private  Endereco endereco;
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 
     public Integer getIdCliente() {
         return idCliente;

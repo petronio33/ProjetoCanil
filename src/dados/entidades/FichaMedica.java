@@ -16,6 +16,23 @@ public class FichaMedica{
     private LocalDate data_validade;
     private String vacinas;
     private Cachorro cao;
+    private Veterinario veterinario;
+
+    public Cachorro getCao() {
+        return cao;
+    }
+
+    public void setCao(Cachorro cao) {
+        this.cao = cao;
+    }
+
+    public Veterinario getVeterinario() {
+        return veterinario;
+    }
+
+    public void setVeterinario(Veterinario veterinario) {
+        this.veterinario = veterinario;
+    }
 
     public String getMedicamento() {
         return medicamento;

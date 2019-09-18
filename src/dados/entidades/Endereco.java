@@ -11,7 +11,6 @@ package dados.entidades;
  */
 public class Endereco {
     private String endereco;
-    private Cliente endereco_cliente;
     private int numero;
     private String rua;
     private Bairro bairro;
@@ -25,15 +24,6 @@ public class Endereco {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
-    public Cliente getEndereco_cliente() {
-        return endereco_cliente;
-    }
-
-    public void setEndereco_cliente(Cliente endereco_cliente) {
-        this.endereco_cliente = endereco_cliente;
-    }
-
     public int getNumero() {
         return numero;
     }

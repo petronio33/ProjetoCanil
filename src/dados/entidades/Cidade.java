@@ -12,7 +12,6 @@ package dados.entidades;
 public class Cidade {
     private Integer idCidade;
     private String nomeCidade;
-    private Estado estado;
 
     public Integer getIdCidade() {
         return idCidade;
@@ -30,11 +29,5 @@ public class Cidade {
         this.nomeCidade = nomeCidade;
     }
 
-    public Estado getEstado() {
-        return estado;
-    }
 
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
 }
