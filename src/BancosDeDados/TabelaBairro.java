@@ -20,6 +20,9 @@ public class TabelaBairro {
         Bairro a1 = new Bairro();
         a1.setBairro("Centro");
         
+        Bairro a2 = new Bairro();
+        a2.setBairro("Aparecida");
+        
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
@@ -28,6 +31,7 @@ public class TabelaBairro {
         
         //Mandando persistir o objeto
         gerenciador.persist(a1);
+        gerenciador.persist(a2);
         
         //Finalizo a transação
         gerenciador.getTransaction().commit();
