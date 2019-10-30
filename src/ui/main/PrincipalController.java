@@ -21,10 +21,6 @@ public class PrincipalController implements Initializable {
     
     private Label label;
     @FXML
-    private Button but_Cadastro;
-    @FXML
-    private Button But_hosp;
-    @FXML
     private Button But_visu;
     
     private void handleButtonAction(ActionEvent event) {
