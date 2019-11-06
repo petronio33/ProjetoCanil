@@ -11,7 +11,7 @@ package dados.entidades;
  */
 public class Cachorro{
     private Integer  idCachorro;
-    private Raca raça;
+    private String raça;
     private String nome;
     private String porte;
     private String sexo;
@@ -27,12 +27,11 @@ public class Cachorro{
         this.idCachorro = idCachorro;
     }
 
-
-    public Raca getRaça() {
+    public String getRaça() {
         return raça;
     }
 
-    public void setRaça(Raca raça) {
+    public void setRaça(String raça) {
         this.raça = raça;
     }
 
