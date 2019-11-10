@@ -23,6 +23,11 @@ public class Main extends Application {
         
         Scene scene = new Scene(root);
         
+        //Abrir maximizado
+        //stage.setMaximized(true);
+        
+        
+        stage.setTitle("CANIL");
         stage.setScene(scene);
         stage.show();
     }

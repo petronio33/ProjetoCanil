@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dados.entidades;
 
 import java.time.LocalDate;
@@ -12,45 +7,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- *
- * @author IFNMG
- */
 @Entity
 public class Cliente {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCliente;
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 67 * hash + Objects.hashCode(this.idCliente);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Cliente other = (Cliente) obj;
-        if (!Objects.equals(this.idCliente, other.idCliente)) {
-            return false;
-        }
-        return true;
-    }
+    
     private String nome;
+    
+//Construtor vazio da JPA (OBRIGATÓRIO)
+    public Cliente(){}
+    
+    //Construtor
+    public Cliente(String n){
+        this.setNome(n);
+    }
+    
     private String cpf;
     private LocalDate data_nascimento;
-    private String observacao;
     private  String endereco;
     private  String cidade;
     private  String bairro;
@@ -87,14 +62,6 @@ public class Cliente {
         this.data_nascimento = data_nascimento;
     }
 
-    public String getObservacao() {
-        return observacao;
-    }
-
-    public void setObservacao(String observacao) {
-        this.observacao = observacao;
-    }
-
     public String getEndereco() {
         return endereco;
     }
@@ -119,6 +86,30 @@ public class Cliente {
         this.bairro = bairro;
     }
 
-    
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.idCliente);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        if (!Objects.equals(this.idCliente, other.idCliente)) {
+            return false;
+        }
+        return true;
+    }
+ 
 }
   
