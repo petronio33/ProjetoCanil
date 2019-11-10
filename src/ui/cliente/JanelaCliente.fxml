@@ -3,31 +3,49 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cliente.JanelaClienteController">
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ui.cliente.JanelaClienteController">
    <children>
-      <JFXTextField fx:id="textFieldId" editable="false" labelFloat="true" layoutX="32.0" layoutY="26.0" prefHeight="31.0" prefWidth="69.0" promptText="Id" />
-      <JFXTextField fx:id="textFieldNome" labelFloat="true" layoutX="114.0" layoutY="26.0" prefHeight="31.0" prefWidth="573.0" promptText="Nome:" />
-      <JFXTextField fx:id="textFieldCPF" labelFloat="true" layoutX="28.0" layoutY="76.0" prefHeight="31.0" prefWidth="167.0" promptText="CPF:" />
-      <JFXDatePicker fx:id="textFieldDataNasc" defaultColor="#3e106f" editable="false" layoutX="223.0" layoutY="82.0" promptText="Data Nascimento:" />
-      <JFXTextField fx:id="textFieldEndereco" labelFloat="true" layoutX="28.0" layoutY="124.0" prefHeight="31.0" prefWidth="167.0" promptText="Endereço:" />
-      <JFXTextField fx:id="textFieldBairro" labelFloat="true" layoutX="225.0" layoutY="124.0" prefHeight="31.0" prefWidth="159.0" promptText="Bairro:" />
-      <Separator layoutX="12.0" layoutY="188.0" prefHeight="5.0" prefWidth="764.0" />
-      <TableView fx:id="tabela1" layoutX="12.0" layoutY="201.0" prefHeight="391.0" prefWidth="764.0">
-         <columns>
-            <TableColumn fx:id="colId" prefWidth="70.0" text="Id" />
-            <TableColumn fx:id="colNome" prefWidth="260.0" text="Nome" />
-            <TableColumn fx:id="colDataNasc" prefWidth="100.0" text="Data Nasc" />
-            <TableColumn fx:id="colCPF" prefWidth="100.0" text="CPF" />
-            <TableColumn fx:id="colEndereco" prefWidth="250.0" text="Endereço" />
-         </columns>
+      <JFXTextField fx:id="textFieldId" editable="false" labelFloat="true" layoutX="9.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" promptText="Id:" />
+      <JFXTextField fx:id="textFieldNome" labelFloat="true" layoutX="104.0" layoutY="14.0" prefHeight="25.0" prefWidth="346.0" promptText="Nome:" />
+      <JFXTextField fx:id="textFieldCPF" labelFloat="true" layoutX="462.0" layoutY="14.0" promptText="CPF:" />
+      <JFXDatePicker fx:id="datePickerNascimento" defaultColor="#5d3690" layoutX="615.0" layoutY="14.0" promptText="Data Nascimento:" />
+      <JFXTextField fx:id="textFieldCidade" labelFloat="true" layoutX="9.0" layoutY="69.0" prefHeight="25.0" prefWidth="135.0" promptText="Cidade:" />
+      <JFXTextField fx:id="textFieldEndereco" labelFloat="true" layoutX="157.0" layoutY="69.0" prefHeight="25.0" prefWidth="285.0" promptText="Endereço:" />
+      <JFXTextField fx:id="textFieldBairro" labelFloat="true" layoutX="450.0" layoutY="69.0" prefHeight="25.0" prefWidth="135.0" promptText="Bairro:" />
+      <JFXTextField fx:id="textFieldTelefone" labelFloat="true" layoutX="597.0" layoutY="69.0" prefHeight="25.0" prefWidth="135.0" promptText="Telefone:" />
+      <JFXButton layoutX="585.0" layoutY="112.0" onAction="#salvar" text="Salvar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="654.0" layoutY="112.0" onAction="#editar" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="720.0" layoutY="112.0" onAction="#excluir" text="Excluir">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="8.0" layoutY="157.0" prefHeight="8.0" prefWidth="784.0" />
+      <TableView fx:id="tabela" layoutX="9.0" layoutY="183.0" prefHeight="409.0" prefWidth="778.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="45.0" text="Id" />
+          <TableColumn fx:id="colNome" prefWidth="220.0" text="Nome" />
+            <TableColumn fx:id="colDataNasc" prefWidth="71.0" text="Data Nasc" />
+            <TableColumn fx:id="colTelefone" prefWidth="81.0" text="Telefone" />
+            <TableColumn fx:id="colCPF" prefWidth="101.0" text="CPF" />
+            <TableColumn fx:id="colEndereco" prefWidth="180.0" text="Endereço" />
+            <TableColumn fx:id="colBairro" prefWidth="79.0" text="Bairro" />
+        </columns>
       </TableView>
-      <JFXButton layoutX="594.0" layoutY="139.0" onAction="#salvar" text="Salvar" />
-      <JFXButton layoutX="654.0" layoutY="139.0" onAction="#editar" text="Editar" />
-      <JFXButton layoutX="712.0" layoutY="139.0" onAction="#excluir" text="Excluir" />
    </children>
 </AnchorPane>

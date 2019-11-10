@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ui.main;
 
 import java.io.IOException;
@@ -14,16 +9,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author IFNMG
- */
+
 public class PrincipalController implements Initializable {
     
     private Label label;
@@ -65,7 +58,29 @@ public class PrincipalController implements Initializable {
     }
 
     @FXML
-    private void abrirCadastroCachorro(ActionEvent event){
+    private void abrirCadastroCachorro(ActionEvent event)throws IOException{
+        //Código para abrir uma nova Janela
+        //Ler o FXML que representa a nova janela
+        //(adicionar o throws)
+        Parent root = FXMLLoader.load(getClass()
+                .getResource("/ui/cachorro/JanelaCachorro.fxml"));
+        //Criando a cena
+        Scene scene = new Scene(root);
+        //Criando a janela (STAGE) 
+        Stage stage = new Stage(StageStyle.UTILITY);
+        //Titulo na janela
+        stage.setTitle("Cadastro de Cachorro");
+        //Adicionando a cena na janela
+        stage.setScene(scene);
+        
+        //Configurando o MODALITY
+        //Diz respeito ao comportamento das janelas anteriores
+        //quando essa for mostrada
+        //Para bloquear interação com as janelas anteriores
+        stage.initModality(Modality.APPLICATION_MODAL);
+        
+        //Mostrando a nova janela
+        stage.show();
     }
 
     @FXML

@@ -5,8 +5,10 @@
  */
 package ui.cachorro;
 
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -15,6 +17,11 @@ import javafx.fxml.Initializable;
  * @author Petrônio
  */
 public class JanelaCachorroController implements Initializable {
+
+    @FXML
+    private JFXTextField idCachorro;
+    @FXML
+    private JFXTextField idNomeCachorro;
 
     /**
      * Initializes the controller class.

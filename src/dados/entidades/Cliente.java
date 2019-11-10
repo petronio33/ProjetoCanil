@@ -29,6 +29,15 @@ public class Cliente {
     private  String endereco;
     private  String cidade;
     private  String bairro;
+    private  String telefone;
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
     public Integer getIdCliente() {
         return idCliente;
