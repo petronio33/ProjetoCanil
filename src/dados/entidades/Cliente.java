@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Cliente {
@@ -30,7 +31,10 @@ public class Cliente {
     private  String cidade;
     private  String bairro;
     private  String telefone;
-
+   
+    @ManyToOne(optional=false)
+    private Cachorro cachorro;
+   
     public String getTelefone() {
         return telefone;
     }

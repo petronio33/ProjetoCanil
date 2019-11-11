@@ -3,10 +3,9 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ui.cachorro.JanelaCachorroController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cachorro.JanelaCachorroController">
    <children>
-      <JFXTextField fx:id="idCachorro" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" text="Id:" />
-      <JFXTextField fx:id="idNomeCachorro" editable="false" layoutX="100.0" layoutY="14.0" prefHeight="25.0" prefWidth="182.0" text="Nome:" />
+      <JFXTextField fx:id="idCachorro" editable="false" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" promptText="Id:" />
+      <JFXTextField fx:id="idNomeCachorro" editable="false" labelFloat="true" layoutX="100.0" layoutY="14.0" prefHeight="25.0" prefWidth="182.0" promptText="Nome:" />
    </children>
 </AnchorPane>
